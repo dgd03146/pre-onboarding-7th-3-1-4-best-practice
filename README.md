@@ -205,7 +205,7 @@ this.deleteCache(key);
 ```
 
 - Cache data was managed by implementing a CacheService class with a Map instance.
-- We set the input value of input as key value and checked the key value in Map first, and if there is no key value, data is stored in state, and if there is a key value, caching is applied by loading the data of the existing key value.
+- I set the input value of input as key value and checked the key value in Map first, and if there is no key value, data is stored in state, and if there is a key value, caching is applied by loading the data of the existing key value.
 - cacheTimeout
     - The logic is to measure the staleTime time and cacheTime using the setTimeout method, refetch the data when the staleTime passes, and delete the cache data stored in the Map object after the cacheTime.
     - If the server's data is determined to be corrupted by setting the expire of the data received from the server, the server's data is fetched again, and after the cache time, the data in cache is deleted from the garbage collector in react query.
